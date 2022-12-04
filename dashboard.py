@@ -89,9 +89,9 @@ def buy_recomm(data, geofile):
         st.sidebar.markdown('* Selecione os filtros para obter as melhores opções de compra')
         # Filtragem dos Dados pelas Características do Imóveis
         f_bedrooms = st.sidebar.selectbox('Número máx. Quartos',
-                                          sorted(set(df3['bedrooms'].unique())))
+                                          sorted(df3['bedrooms'].unique()), index=1)
         f_bathrooms = st.sidebar.selectbox('Número máx. Banheiros',
-                                           sorted(set(df3['bathrooms'].unique())))
+                                           sorted(df3['bathrooms'].unique()), index=4)
 
         f_zipcode = st.sidebar.multiselect('Códigos Postais - Zipcode', df3['zipcode'].sort_values().unique())
         if f_zipcode != []:
@@ -233,7 +233,7 @@ def sell_recomm(data):
         df7 = df6[['zipcode', 'price', 'sale', 'profit']].groupby('zipcode').mean().reset_index()
         c2.dataframe(df7)
 
-        st.subheader('Projeção total de lucros de até $128.309.530,00 levando em consideração os melhores \
+        st.subheader('Projeção total de lucros de até $52.597.123,00 levando em consideração os melhores \
          cenários de compra e venda, acima expostos.')
 
         return data
