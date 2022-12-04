@@ -1,3 +1,7 @@
+ <h1 align="center"> Northwest Real Estate Agency </h1>
+
+![Getting Started](./image_readme.jpg)
+
 # Sejam bem-vindos ao meu projeto de portfólio de negócio da empresa fictícia Northwest Real Estate Agency.
 ###### [Visualizar projeto](link)
 

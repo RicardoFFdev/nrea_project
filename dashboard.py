@@ -242,7 +242,7 @@ def sell_recomm(data):
 # Núcleo do código
 # -------------------------
 if __name__ == '__main__':
-    path = 'kc_house_data.csv'
+    path = 'csv_files/kc_house_data.csv'
     url = 'https://opendata.arcgis.com/datasets/83fc2e72903343aabff6de8cb445b81c_2.geojson'
 
     # Carregamento
