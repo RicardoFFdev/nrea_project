@@ -145,8 +145,11 @@ Analisar o preço do imóvel tirando o impacto do tamanho de área construída e
 ## 5. Premissas
 
 Dados Faltantes: nenhum dos atributos do dataset possui dados faltantes
+
 Imóveis Duplicados: existem 177 imóveis que estão duplicados no dataset, ou seja, significa que foram vendidos mais de uma vez em períodos distintos ao longo do tempo que abrange a coleta de dados dos imóveis. 
+
 Valor ‘outlier’ para número de quartos: há um único imóvel que possui 33 quartos, porém ao se realizar um cruzamento de dados, como por exemplo o tamanho total do terreno deste imóvel, foi possível afirmar que este dado é inverídico. Além disso, analisou-se outros imóveis com faixa de preço, faixa de tamanho interno do imóvel, quantidade de banheiros e andares semelhante a esse imóvel e a quantidade média de quartos nos imóveis analisados foi de 2,98.
+
 Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quartos ou zero banheiros na base de dados, assumiremos que estão corretos e não serão excluídos dado que os imóveis podem não ser para uso residencial, de moradia.
 
 ## 6. Seis Principais Insights
@@ -179,24 +182,33 @@ Considerando a maior variação no preço mediano, o maio percentual de aumento 
 ## 7. Questões de Negócio
 
 As questões de negócio foram solucionadas com embasamento analítico e, também, com a análise exploratória dos dados.
+
 Quais são os imóveis que a Northwest Real Estate Agency deveria comprar e por qual preço ?
+
 Os imóveis foram agrupados por região ( zipcode ) e dentro de cada região, encontrei a mediana dos preços por área construída.
 Irei sugerir a compra dos imóveis que possuem preço abaixo da mediana da região, estejam em boas condições de conservação maior ou igual a 3, que tenham um ou mais banheiros e quartos e, também, devem ter uma grade de classificação maior ou igual a 7.
+
 Todos os imóveis que estão dentro destes filtros de compra serão separados em uma lista.
 Dentro desta lista separei os dois imóveis prioritários para aquisição, já que os mesmos possuem 'Vista para a Água'.
+
 Uma vez que o imóvel foi comprado, por qual preço vendê-los e qual é a melhor época para concretizar a venda?
+
 Agruparei os imóveis por região ( zipcode ) e por estação do ano. Dentro de cada região e estação, irei calcular a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados. Assim poderemos ter uma clara noção do preço de venda e também do lucro resultado. 
 
 ## 8.0 Conclusão
 
-Os objetivos almejados inicialmente foram cumpridos no que tange a lista de recomendações de imóveis para compra, bem como, a projeção do valor de venda desses imóveis. Além disso, conseguiu-se obter 5 principais insights da base de dados estudada e por fim, tudo isso foi colocado em uma aplicação na nuvem o que facilita o acesso a todas as análises realizadas.
+Os objetivos almejados inicialmente foram cumpridos no que tange a lista de recomendações de imóveis para compra, bem como, a projeção do valor de venda desses imóveis. Além disso, foi possível responder os 6 principais insights da base de dados estudada e por fim, tudo isso foi colocado em uma aplicação na nuvem, o que facilita o acesso a todas as análises realizadas.
+
 Sobre os resultados encontrados, pode-se perceber bastante influência do atributo área construída (área interna) do imóvel no preço, dessa forma, buscou-se retirar seu impacto ao comparar outros atributos com o preço para que assim, a análise não ficasse enviesada.
+
 Aferimos então que o presente projeto se torna mais um exemplo da importância do uso de dados para auxiliar os times de negócio nas suas tomadas de decisões dentro da empresa. Também podemos apontar, que além das ferramentas usuais de tecnologia e estatística, o conhecimento vindo das mais diversas áreas pode impactar na qualidade da análise dos dados.
-Além disso, a geração de insights pode nos trazer novas perguntas ou até mesmo novas análises sob todos os dados diferentes unindo assim o negócio no seu âmago e a análise exploratória de dados.
+
+Além disso, a geração de insights pode nos trazer novas perguntas ou até mesmo novas análises sob todos os dados diferentes, unindo assim o negócio no seu âmago e a análise exploratória de dados (EDA).
 
 ## 9.0 Próximos Passos
 
 Usar algoritmos de Machine Learning para recomendar o preço estimado de venda e compra. Usar clusterização para fazer análise de comparação de imóveis.
+
 Compartilhar todos os Insights gerados com os outros times da empresa ,e assim alcançar novos horizontes. Toda nova idéia que gere discussões e contradições no projetos, serão sempre muito bem-vindas. Afinal quanto mais compartilhado for o conhecimento, melhores serão os resultados produzidos.
 
 
