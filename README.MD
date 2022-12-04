@@ -7,8 +7,8 @@
 
 ## 1. O Problema do Negócio
 
-Nesse projeto de negócio irei analisar um banco de dados real. Este banco de dados público, foi  disponibilizado pelo website de competições de Data Science, o Kaggle.
-A empresa Northwest Real Estate Agency tem como objetivo realizar a compra e venda de imóveis na cidade de Seattle. Para isso a empresa necessita de uma análise precisa de todas as informações e assim poder obter o lucro desejado na compra e venda de imóveis.
+Neste projeto de negócio irei analisar um banco de dados real. Este banco de dados público, foi  disponibilizado pelo website de competições de Data Science, o Kaggle.
+A empresa Northwest Real Estate Agency tem como objetivo realizar a compra e, a venda de imóveis na cidade de Seattle. Para isso a empresa necessita de uma análise precisa de todas as informações e assim poder obter o lucro desejado na compra/venda de imóveis.
 
 ## 1.1 Contexto de negócio
 
@@ -22,29 +22,23 @@ Nesse banco de dados iremos encontrar 21.613 entradas que datam de 02/05/2014 at
 
 ## 2. Planejamento prévio
 
-## 2.1 Ferramentas
+## 2.1 Ferramentas, IDE's e Bibliotecas
 
 * Python 3.10
 * Visual Studio Code
 * Jupyter Notebook
 * PyCharm Community Ed.
-* Seaborn
-* Plotly
-* Plotly Express
-* Pandas
-* Numpy
-* Folium
-* Geopandas
-* Streamlit-Folium
-* Streamlit Web Apps 
+* Bibliotecas: Seaborn, Plotly, Plotly Express, Pandas, Numpy, Folium, Geopandas, Streamlit-Folium e Streamlit
+* Deploy final Streamlit Web Apps
 
 
 ## 2.2 Produto final
 
 Página Web com as seguintes informações:
-As sugestões de compra dos imóveis e o valor recomendado.
-O valor recomendado para a venda dos imóveis adquiridos.
-Os seis principais insights.
+* Solucionar os seis principais insights.
+* Realizar as sugestões de compra dos imóveis.
+* Sugerir o valor de venda para os imóveis adquiridos.
+
 
 ## 3. Estudo do negócio
 
@@ -107,8 +101,8 @@ O mercado de imóveis de Seattle é muito competitivo. As casas em Seattle receb
 
 ## 4.3 Atributos criados
 
-|     COLUNA      | DESCRIÇÃO                                                                |
-|:---------------:|--------------------------------------------------------------------------|
+|     COLUNA      | DESCRIÇÃO                                                              |
+|:---------------:|------------------------------------------------------------------------|
 | date_str        | Data de venda no formato Dia/Mês/Ano                                   |
 | year            | Ano da venda do imóvel                                                 |
 | month           | Mês da venda do imóvel                                                 |
@@ -117,30 +111,23 @@ O mercado de imóveis de Seattle é muito competitivo. As casas em Seattle receb
 | lot_m2          | Tamanho (m²) do terreno onde o imóvel está situado                     |
 | above_m2        | Tamanho (m²) do espaço interior que se encontra acima do nível do solo |
 | age             | Idade do imóvel. (Ano atual - Ano Construção)                          |
-| renovated       | Se foi reformado                                                       |
-| living_price_m2 | Preço do imóvel pela área da sala de estar em m²                       |
-| lot_price_m2    | Preço do imóvel pela área do lote em m²                                |
-| price_m2_total  | Preço do imóvel pela área total em m²                                  |
+| renovated       | Sim se o imóvel foi reformado, e Não caso contrário                                                       |
+| price_m2        | Preço do imóvel pela área total em m²                                  |
 
 ## 4.4 Detalhamento atributos criados
 
 Estações do ano (seasons):
-Verão = de junho a agosto.
-Outono = de setembro a novembro.
-Inverno = de dezembro a fevereiro.
-Primavera = de março a maio.
+
+Verão (summer) = de junho a agosto.
+Outono (autumn) = de setembro a novembro.
+Inverno (winter) = de dezembro a fevereiro.
+Primavera (spring) = de março a maio.
 
 m2_living, m2_lot e m2_above:
-Converteu a unidade de medida de área dividindo o valor em pé quadrado por 10,764.
+Conversão de unidade de pé quadrado (sqft) para metro quadrado (m²).
 
-m2_outside:
-Para calcular a área externa dos imóveis, subtraiu-se do tamanho de seus terrenos o valor da divisão entre a área construída acima do nível do solo sob os andares.
-
-price_per_m2_living:
-Analisar o preço do imóvel tirando o impacto do tamanho de área construída dele. Preço/área construída(m2)
-
-price_per_m2_living_outside:
-Analisar o preço do imóvel tirando o impacto do tamanho de área construída e a área externa. Preço/ (área construída(m2) + área externa(m2) ).
+price_m2 = price / living_m2 + lot_m2 + above_m2
+Analisar o preço do imóvel pela sua área construída.
 
 ## 5. Premissas
 
@@ -150,7 +137,7 @@ Imóveis Duplicados: existem 177 imóveis que estão duplicados no dataset, ou s
 
 Valor ‘outlier’ para número de quartos: há um único imóvel que possui 33 quartos, porém ao se realizar um cruzamento de dados, como por exemplo o tamanho total do terreno deste imóvel, foi possível afirmar que este dado é inverídico. Além disso, analisou-se outros imóveis com faixa de preço, faixa de tamanho interno do imóvel, quantidade de banheiros e andares semelhante a esse imóvel e a quantidade média de quartos nos imóveis analisados foi de 2,98.
 
-Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quartos ou zero banheiros na base de dados, assumiremos que estão corretos e não serão excluídos dado que os imóveis podem não ser para uso residencial, de moradia.
+Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quartos ou zero banheiros na base de dados, assumiremos que estão corretos e não serão excluídos. Dado que estes imóveis podem não ser direcionados para uso residencial, de moradia.
 
 ## 6. Seis Principais Insights
 
