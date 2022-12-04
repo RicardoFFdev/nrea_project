@@ -7,12 +7,12 @@
 
 ## 1. O Problema do Negócio
 
-##### Nesse projeto de negócio irei analisar um banco de dados real. Este banco de dados público, foi  disponibilizado pelo website de competições de Data Science, o Kaggle.
-#### A empresa Northwest Real Estate Agency tem como objetivo realizar a compra e venda de imóveis na cidade de Seattle. Para isso a empresa necessita de uma análise precisa de todas as informações e assim poder obter o lucro desejado na compra e venda de imóveis.
+Nesse projeto de negócio irei analisar um banco de dados real. Este banco de dados público, foi  disponibilizado pelo website de competições de Data Science, o Kaggle.
+A empresa Northwest Real Estate Agency tem como objetivo realizar a compra e venda de imóveis na cidade de Seattle. Para isso a empresa necessita de uma análise precisa de todas as informações e assim poder obter o lucro desejado na compra e venda de imóveis.
 
 ## 1.1 Contexto de negócio
 
-#### Nesse banco de dados iremos encontrar 21.613 entradas que datam de 02/05/2014 até 27/05/2015. Todas as entradas são de imóveis únicos da cidade de Seattle, situada na costa do pacífico nos EUA.
+Nesse banco de dados iremos encontrar 21.613 entradas que datam de 02/05/2014 até 27/05/2015. Todas as entradas são de imóveis únicos da cidade de Seattle, situada na costa do pacífico nos EUA.
 
 ## 1.2 Questões do time de negócios
 
@@ -24,18 +24,31 @@
 
 ## 2.1 Ferramentas
 
-####  Python 3.10, Visual Studio Code, Jupyter Notebook, PyCharm Community Ed., Seaborn, Plotly, Plotly Express, Pandas, Numpy, Folium, Geopandas, Streamlit Web Apps e Streamlit-Folium.
+* Python 3.10
+* Visual Studio Code
+* Jupyter Notebook
+* PyCharm Community Ed.
+* Seaborn
+* Plotly
+* Plotly Express
+* Pandas
+* Numpy
+* Folium
+* Geopandas
+* Streamlit-Folium
+* Streamlit Web Apps 
+
 
 ## 2.2 Produto final
 
-#### Página Web com as seguintes informações:
-#### As sugestões de compra dos imóveis e o valor recomendado.
-#### O valor recomendado para a venda dos imóveis adquiridos.
-#### Os seis principais insights.
+Página Web com as seguintes informações:
+As sugestões de compra dos imóveis e o valor recomendado.
+O valor recomendado para a venda dos imóveis adquiridos.
+Os seis principais insights.
 
 ## 3. Estudo do negócio
 
-#### O mercado de imóveis de Seattle é muito competitivo. As casas em Seattle recebem, na média, duas ofertas de venda a cada 14 dias.  Em Seattle por mês são comercializados U$843.000,00 na média, só no mercado imobiliário. Esse valor cresce na média de 7,3% ao ano. O preço médio de venda do square foot em Seattle é de U$555,00, valores estes do último ano. [fonte](fonte: https://www.redfin.com/city/16163/WA/Seattle/housing-market)
+O mercado de imóveis de Seattle é muito competitivo. As casas em Seattle recebem, na média, duas ofertas de venda a cada 14 dias.  Em Seattle por mês são comercializados U$843.000,00 na média, só no mercado imobiliário. Esse valor cresce na média de 7,3% ao ano. O preço médio de venda do square foot em Seattle é de U$555,00, valores estes do último ano. [fonte](fonte: https://www.redfin.com/city/16163/WA/Seattle/housing-market)
 
 
 ## 4.0 Dados
@@ -71,26 +84,26 @@
 
 ## 4.2 Detalhamento dos atributos de origem
 
-#### waterfront: 0 = não, 1 = sim
-#### view: 0 = Sem vista, 1 = Razoável, 2 = Média, 3 = Boa, 4 = Excelente
-#### yr_renovated: ano de reforma ou ‘0’ se nunca renovado.
-#### bathrooms: Nos EUA existem banheiros completos que obrigatóriamente possuem quatro acessórios de encanamento. Um banheiro completo contém pelo menos um lavatório, um sanitário, um chuveiro e uma banheira. O banheiro que aparece com 0.5, representa um banheiro com sanitário e pia, já o banheiro 0.75 é um banheiro que contém um lavatório, um sanitário e um chuveiro ou banheira.
-#### condition: 1 = Desgastado. Reparação e revisão necessária em superfícies pintadas, coberturas, canalizações, aquecimento e numerosas insuficiências funcionais. 
-#### 2 = Bastante desgastado. É necessária muita reparação.
-#### 3 = Média. Algumas provas de manutenção diferida e obsolescência normal com a idade, na medida em que algumas pequenas reparações são necessárias, juntamente com alguns retoques.
-#### 4 = Bom. Não é necessária manutenção óbvia, mas também não é tudo novo.
-#### 5= Muito Bom. Todos os artigos bem conservados, muitos dos quais foram renovados e reparados à medida que mostraram sinais de desgaste, aumentando a esperança de vida e diminuindo a idade efetiva com pouca deterioração ou obsolescência evidente com um elevado grau de utilidade.
-#### grade: (1-3): abaixo dos padrões mínimos de construção.
-#### 4: Geralmente mais antiga, construção de baixa qualidade.
-#### 5: Baixos custos de construção e mão-de-obra. Projeto pequeno e simples.
-#### 6: A avaliação mais baixa que cumpre atualmente o código de construção. Materiais de baixa qualidade e projeto arquitetônico simples.
-#### 7: tem um nível médio de construção e concepção.
-#### 8: Um pouco acima da média em construção e concepção. Normalmente melhores materiais tanto no trabalho de acabamento exterior como interior.
-#### 9: Melhor design arquitetônico com design e qualidade extra no interior e exterior.
-#### 10: Casas com esta qualidade têm geralmente características de alta qualidade. Os trabalhos de acabamento são melhores e mais qualidade de design é vista nas plantas dos pisos. Geralmente têm um tamanho maior.
-#### 11: Desenho personalizado e trabalhos de acabamento de maior qualidade com comodidades acrescidas de madeiras maciças, instalações sanitárias e opções mais luxuosas.
-#### 12: Desenho à medida e excelentes construtores. Todos os materiais são da mais alta qualidade e todas as conveniências estão presentes.
-#### 13: Geralmente concebidos e construídos à medida. Nível de mansão. Grande quantidade de trabalho de armário da mais alta qualidade, acabamentos em madeira, mármore, formas de entrada, etc.
+* waterfront: 0 = não, 1 = sim
+* view: 0 = Sem vista, 1 = Razoável, 2 = Média, 3 = Boa, 4 = Excelente
+* yr_renovated: ano de reforma ou ‘0’ se nunca renovado.
+* bathrooms: Nos EUA existem banheiros completos que obrigatóriamente possuem quatro acessórios de encanamento. Um banheiro completo contém pelo menos um lavatório, um sanitário, um chuveiro e uma banheira. O banheiro que aparece com 0.5, representa um banheiro com sanitário e pia, já o banheiro 0.75 é um banheiro que contém um lavatório, um sanitário e um chuveiro ou banheira.
+* condition: 1 = Desgastado. Reparação e revisão necessária em superfícies pintadas, coberturas, canalizações, aquecimento e numerosas insuficiências funcionais. 
+* 2 = Bastante desgastado. É necessária muita reparação.
+* 3 = Média. Algumas provas de manutenção diferida e obsolescência normal com a idade, na medida em que algumas pequenas reparações são necessárias, juntamente com alguns retoques.
+* 4 = Bom. Não é necessária manutenção óbvia, mas também não é tudo novo.
+* 5= Muito Bom. Todos os artigos bem conservados, muitos dos quais foram renovados e reparados à medida que mostraram sinais de desgaste, aumentando a esperança de vida e diminuindo a idade efetiva com pouca deterioração ou obsolescência evidente com um elevado grau de utilidade.
+* grade: (1-3): abaixo dos padrões mínimos de construção.
+* 4: Geralmente mais antiga, construção de baixa qualidade.
+* 5: Baixos custos de construção e mão-de-obra. Projeto pequeno e simples.
+* 6: A avaliação mais baixa que cumpre atualmente o código de construção. Materiais de baixa qualidade e projeto arquitetônico simples.
+* 7: tem um nível médio de construção e concepção.
+* 8: Um pouco acima da média em construção e concepção. Normalmente melhores materiais tanto no trabalho de acabamento exterior como interior.
+* 9: Melhor design arquitetônico com design e qualidade extra no interior e exterior.
+* 10: Casas com esta qualidade têm geralmente características de alta qualidade. Os trabalhos de acabamento são melhores e mais qualidade de design é vista nas plantas dos pisos. Geralmente têm um tamanho maior.
+* 11: Desenho personalizado e trabalhos de acabamento de maior qualidade com comodidades acrescidas de madeiras maciças, instalações sanitárias e opções mais luxuosas.
+* 12: Desenho à medida e excelentes construtores. Todos os materiais são da mais alta qualidade e todas as conveniências estão presentes.
+* 13: Geralmente concebidos e construídos à medida. Nível de mansão. Grande quantidade de trabalho de armário da mais alta qualidade, acabamentos em madeira, mármore, formas de entrada, etc.
 
 ## 4.3 Atributos criados
 
@@ -111,26 +124,30 @@
 
 ## 4.4 Detalhamento atributos criados
 
-#### Estações do ano (seasons):
+Estações do ano (seasons):
 Verão = de junho a agosto.
 Outono = de setembro a novembro.
 Inverno = de dezembro a fevereiro.
 Primavera = de março a maio.
+
 m2_living, m2_lot e m2_above:
-#### Converteu a unidade de medida de área dividindo o valor em pé quadrado por 10,764.
+Converteu a unidade de medida de área dividindo o valor em pé quadrado por 10,764.
+
 m2_outside:
-#### Para calcular a área externa dos imóveis, subtraiu-se do tamanho de seus terrenos o valor da divisão entre a área construída acima do nível do solo sob os andares.
+Para calcular a área externa dos imóveis, subtraiu-se do tamanho de seus terrenos o valor da divisão entre a área construída acima do nível do solo sob os andares.
+
 price_per_m2_living:
-#### Analisar o preço do imóvel tirando o impacto do tamanho de área construída dele. Preço/área construída(m2)
+Analisar o preço do imóvel tirando o impacto do tamanho de área construída dele. Preço/área construída(m2)
+
 price_per_m2_living_outside:
-#### Analisar o preço do imóvel tirando o impacto do tamanho de área construída e a área externa. Preço/ (área construída(m2) + área externa(m2) ).
+Analisar o preço do imóvel tirando o impacto do tamanho de área construída e a área externa. Preço/ (área construída(m2) + área externa(m2) ).
 
 ## 5. Premissas
 
-#### Dados Faltantes: nenhum dos atributos do dataset possui dados faltantes
-#### Imóveis Duplicados: existem 177 imóveis que estão duplicados no dataset, ou seja, significa que foram vendidos mais de uma vez em períodos distintos ao longo do tempo que abrange a coleta de dados dos imóveis. 
-#### Valor ‘outlier’ para número de quartos: há um único imóvel que possui 33 quartos, porém ao se realizar um cruzamento de dados, como por exemplo o tamanho total do terreno deste imóvel, foi possível afirmar que este dado é inverídico. Além disso, analisou-se outros imóveis com faixa de preço, faixa de tamanho interno do imóvel, quantidade de banheiros e andares semelhante a esse imóvel e a quantidade média de quartos nos imóveis analisados foi de 2,98.
-#### Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quartos ou zero banheiros na base de dados, assumiremos que estão corretos e não serão excluídos dado que os imóveis podem não ser para uso residencial, de moradia.
+Dados Faltantes: nenhum dos atributos do dataset possui dados faltantes
+Imóveis Duplicados: existem 177 imóveis que estão duplicados no dataset, ou seja, significa que foram vendidos mais de uma vez em períodos distintos ao longo do tempo que abrange a coleta de dados dos imóveis. 
+Valor ‘outlier’ para número de quartos: há um único imóvel que possui 33 quartos, porém ao se realizar um cruzamento de dados, como por exemplo o tamanho total do terreno deste imóvel, foi possível afirmar que este dado é inverídico. Além disso, analisou-se outros imóveis com faixa de preço, faixa de tamanho interno do imóvel, quantidade de banheiros e andares semelhante a esse imóvel e a quantidade média de quartos nos imóveis analisados foi de 2,98.
+Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quartos ou zero banheiros na base de dados, assumiremos que estão corretos e não serão excluídos dado que os imóveis podem não ser para uso residencial, de moradia.
 
 ## 6. Seis Principais Insights
 
@@ -161,28 +178,26 @@ Considerando a maior variação no preço mediano, o maio percentual de aumento 
 
 ## 7. Questões de Negócio
 
-#### As questões de negócio foram solucionadas com embasamento analítico e, também, com a análise exploratória dos dados.
-#### Quais são os imóveis que a Northwest Real Estate Agency deveria comprar e por qual preço ?
-####
-#### Os imóveis foram agrupados por região ( zipcode ) e dentro de cada região, encontrei a mediana dos preços por área construída.
-#### Irei sugerir a compra dos imóveis que possuem preço abaixo da mediana da região, estejam em boas condições de conservação maior ou igual a 3, que tenham um ou mais banheiros e quartos e, também, devem ter uma grade de classificação maior ou igual a 7.
-#### Todos os imóveis que estão dentro destes filtros de compra serão separados em uma lista.
-#### Dentro desta lista separei os dois imóveis prioritários para aquisição, já que os mesmos possuem 'Vista para a Água'.
-####
-#### Uma vez que o imóvel foi comprado, por qual preço vendê-los e qual é a melhor época para concretizar a venda?
-#### Agruparei os imóveis por região ( zipcode ) e por estação do ano. Dentro de cada região e estação, irei calcular a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados. Assim poderemos ter uma clara noção do preço de venda e também do lucro resultado. 
+As questões de negócio foram solucionadas com embasamento analítico e, também, com a análise exploratória dos dados.
+Quais são os imóveis que a Northwest Real Estate Agency deveria comprar e por qual preço ?
+Os imóveis foram agrupados por região ( zipcode ) e dentro de cada região, encontrei a mediana dos preços por área construída.
+Irei sugerir a compra dos imóveis que possuem preço abaixo da mediana da região, estejam em boas condições de conservação maior ou igual a 3, que tenham um ou mais banheiros e quartos e, também, devem ter uma grade de classificação maior ou igual a 7.
+Todos os imóveis que estão dentro destes filtros de compra serão separados em uma lista.
+Dentro desta lista separei os dois imóveis prioritários para aquisição, já que os mesmos possuem 'Vista para a Água'.
+Uma vez que o imóvel foi comprado, por qual preço vendê-los e qual é a melhor época para concretizar a venda?
+Agruparei os imóveis por região ( zipcode ) e por estação do ano. Dentro de cada região e estação, irei calcular a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados. Assim poderemos ter uma clara noção do preço de venda e também do lucro resultado. 
 
 ## 8.0 Conclusão
 
-##### Os objetivos almejados inicialmente foram cumpridos no que tange a lista de recomendações de imóveis para compra, bem como, a projeção do valor de venda desses imóveis. Além disso, conseguiu-se obter 5 principais insights da base de dados estudada e por fim, tudo isso foi colocado em uma aplicação na nuvem o que facilita o acesso a todas as análises realizadas.
-#### Sobre os resultados encontrados, pode-se perceber bastante influência do atributo área construída (área interna) do imóvel no preço, dessa forma, buscou-se retirar seu impacto ao comparar outros atributos com o preço para que assim, a análise não ficasse enviesada.
-#### Aferimos então que o presente projeto se torna mais um exemplo da importância do uso de dados para auxiliar os times de negócio nas suas tomadas de decisões dentro da empresa. Também podemos apontar, que além das ferramentas usuais de tecnologia e estatística, o conhecimento vindo das mais diversas áreas pode impactar na qualidade da análise dos dados.
-##### Além disso, a geração de insights pode nos trazer novas perguntas ou até mesmo novas análises sob todos os dados diferentes unindo assim o negócio no seu âmago e a análise exploratória de dados.
+Os objetivos almejados inicialmente foram cumpridos no que tange a lista de recomendações de imóveis para compra, bem como, a projeção do valor de venda desses imóveis. Além disso, conseguiu-se obter 5 principais insights da base de dados estudada e por fim, tudo isso foi colocado em uma aplicação na nuvem o que facilita o acesso a todas as análises realizadas.
+Sobre os resultados encontrados, pode-se perceber bastante influência do atributo área construída (área interna) do imóvel no preço, dessa forma, buscou-se retirar seu impacto ao comparar outros atributos com o preço para que assim, a análise não ficasse enviesada.
+Aferimos então que o presente projeto se torna mais um exemplo da importância do uso de dados para auxiliar os times de negócio nas suas tomadas de decisões dentro da empresa. Também podemos apontar, que além das ferramentas usuais de tecnologia e estatística, o conhecimento vindo das mais diversas áreas pode impactar na qualidade da análise dos dados.
+Além disso, a geração de insights pode nos trazer novas perguntas ou até mesmo novas análises sob todos os dados diferentes unindo assim o negócio no seu âmago e a análise exploratória de dados.
 
 ## 9.0 Próximos Passos
 
-#### Usar algoritmos de Machine Learning para recomendar o preço estimado de venda e compra. Usar clusterização para fazer análise de comparação de imóveis.
-#### Compartilhar todos os Insights gerados com os outros times da empresa ,e assim alcançar novos horizontes. Toda nova idéia que gere discussões e contradições no projetos, serão sempre muito bem-vindas. Afinal quanto mais compartilhado for o conhecimento, melhores serão os resultados produzidos.
+Usar algoritmos de Machine Learning para recomendar o preço estimado de venda e compra. Usar clusterização para fazer análise de comparação de imóveis.
+Compartilhar todos os Insights gerados com os outros times da empresa ,e assim alcançar novos horizontes. Toda nova idéia que gere discussões e contradições no projetos, serão sempre muito bem-vindas. Afinal quanto mais compartilhado for o conhecimento, melhores serão os resultados produzidos.
 
 
 
