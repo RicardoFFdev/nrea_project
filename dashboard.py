@@ -148,13 +148,13 @@ def buy_recomm(data, geofile):
                                       default_zoom_start=15)
 
         map_1.choropleth(data=df_map,
-                                    geo_data=geofile,
-                                    columns=['ZIP', 'PRICE'],
-                                    key_on='feature.properties.ZIP',
-                                    fill_color='YlGn',
-                                    fill_opacity=0.7,
-                                    line_opacity=0.2,
-                                    legend_name='AVG PRICE')
+                                geo_data=geofile,
+                                columns=['ZIP', 'PRICE'],
+                                key_on='feature.properties.ZIP',
+                                fill_color='YlGn',
+                                fill_opacity=0.7,
+                                line_opacity=0.2,
+                                legend_name='AVG PRICE')
 
         st.subheader('Mapa da densidade de preço por região')
         folium_static(map_1)
@@ -233,7 +233,7 @@ def sell_recomm(data):
         df7 = df6[['zipcode', 'price', 'sale', 'profit']].groupby('zipcode').mean().reset_index()
         c2.dataframe(df7)
 
-        st.subheader('Projeção total de lucros de até $52.597.123,00 levando em consideração os melhores \
+        st.subheader('Concluindo, a projeção máxima de lucros obtidos será de até $52.597.123,00. Isso, claro, levando em consideração os melhores \
          cenários de compra e venda, acima expostos.')
 
         return data
