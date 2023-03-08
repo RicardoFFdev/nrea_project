@@ -145,26 +145,38 @@ Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quarto
 X Falsa:
 Os imóveis da categoria 3, 4 e 5 custam 153.22% a mais na média geral
 
+![H1](./images/H1.png)
+
 #### H2: Imóveis com até 50 anos que foram reformados são 20% mais caros do que os não reformados, na média?
 X Falsa:
 Considerando o preço médio, ao invés de 20% mais caros, os imóveis com até 50 de idade reformados são 69.33% mais caros.
+
+![H2](./images/H2.png)
 
 #### H3: Imóveis que possuem vista para água, são 30% mais caros, na média.
 X Falsa:
 Considerando o preço médio, ao invés de 30%, os imóveis com vista para a água custam 212.63% a mais na média
 
+![H3](./images/H3.png)
+
 #### H4: Imóveis com data de construção menor que 1955, são 50% mais baratos, na média.
 X Falsa:
 Considerando o preço médio, imóveis com data de construção menor que 1955, possuem preços 1,09% mais baratos.
+
+![H4](./images/H4.png)
 
 #### H5: Os imóveis das últimas décadas são mais valiosos?
 ✔️ Verdadeira:
 A avaliação dos imóveis construídos nas últimas três décadas encontra-se em média cerca de 19% acima da avaliação dos imóveis
 construídos entre 1900 e 1959, enquanto que há um crescimento médio de 4,7% por década entre as décadas de 1940 e 1990.
 
+![H2](./images/H5.png)
+
 #### H6: O valor mediano do imóveis variam 20% de acordo com a estação do ano?
 X Falsa:
 Considerando a maior variação no preço mediano, o maio percentual de aumento encontrado foi do inverno para a primavera, onde a mediana foi 8.13% maior.
+
+![H6](./images/H6.png)
 
 ## 7. Questões de Negócio
 

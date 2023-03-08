@@ -18,9 +18,9 @@ st.set_page_config(layout='wide', initial_sidebar_state='auto')
 st.markdown("<h1 style='text-align: center;'>Northwest Real Estate Agency</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>Bem vindo à Northwest Real Estate Agency Data Analysis!</h4>", unsafe_allow_html=True)
 st.markdown('Esse projeto de negócio foi elaborado à partir de um banco de dados real. \
-             Este banco de dados, público, foi  disponibilizado pelo website Kaggle, um dos maiores websites de competições de Data Science.')
+             Este banco de dados público, foi  disponibilizado pelo website Kaggle, um dos maiores websites de competições de Data Science.')
 st.markdown('A empresa fictícia Northwest Real Estate Agency tem como objetivo realizar a compra e venda de imóveis na cidade de Seattle (EUA). \
-             Com esse objetivo realizei uma análise exploratória, precisa, de todas as informações contidas no banco de dados. \
+             Com esse objetivo realizei uma análise exploratória de todas as informações contidas no banco de dados. \
              Com a conclusão desta análise foi possível aferir as melhores opções de compra de imóveis e, também, a posterior venda dos mesmos, \
              alcançando assim uma margem de lucro real para o time de negócios.')
 
@@ -50,7 +50,7 @@ def statistcs(data):
     mediana = pd.DataFrame(num_attributes.apply(np.median))
     std = pd.DataFrame(num_attributes.apply(np.std))
     desc1 = pd.concat([mini, maxi, media, mediana, std], axis=1).reset_index()
-    desc1.columns = ['Atributos', 'Máximo', 'Mínimo', 'Média', 'Mediana', 'Desvio Padrão']
+    desc1.columns = ['Atributos', 'Mínimo', 'Máximo', 'Média', 'Mediana', 'Desvio Padrão']
 
     st.subheader('Estatística Descritiva de Todos os Imóveis do Banco de Dados')
     st.dataframe(desc1)
@@ -125,6 +125,7 @@ def buy_recomm(data, geofile):
         f_price = st.sidebar.slider('Preço', min_price, max_price, avg_price)
         data = df3.loc[df3['price'] < f_price]
 
+        st.sidebar.markdown('* O mapa só será renderizado se houver imóveis disponíveis para os filtros selecionados')
         st.subheader('Imóveis sugeridos para a compra')
         st.markdown('Aqui os imóveis estão agrupados por região ( zipcode ) e dentro de cada região, foi calculada a mediana dos preços por área construída. \
                      Os filtos para a sugestão de compra dos imóveis são os seguintes:  preço abaixo da mediana da região, boas condições \
@@ -183,8 +184,8 @@ def sell_recomm(data):
 
         st.subheader('Uma vez que o imóvel foi comprado, qual é o melhor valor para vendê-lo e qual é a melhor época para concretizar a venda?')
         st.markdown('Os imóveis estão agrupados por região ( zipcode ) e por estação do ano. Dentro de cada região e estação, irei calcular \
-                    a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados que será de 15 a \
-                    35% do valor pago. Assim poderemos ter uma clara noção do preço de venda e também do lucro obtido.')
+                    a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados que será de 5 a \
+                    15% do valor pago. Assim poderemos ter uma clara noção do preço de venda e também do lucro obtido.')
 
         data['date'] = pd.to_datetime(data['date'], format=('%Y-%m-%d'))
         data.loc[data['bedrooms'] == 33, 'bedrooms'] = 3
@@ -219,10 +220,10 @@ def sell_recomm(data):
 
         for x, row in df6.iterrows():
             if (row['price_med_season'] > row['price']):
-                df6.loc[x, 'sale'] = row['price'] * 1.15
+                df6.loc[x, 'sale'] = row['price'] * 1.05
 
             else:
-                df6.loc[x, 'sale'] = row['price'] * 1.35
+                df6.loc[x, 'sale'] = row['price'] * 1.15
 
         c1, c2 = st.columns(2)
         fig = px.histogram(df6, x='season', y='price', color='season')
