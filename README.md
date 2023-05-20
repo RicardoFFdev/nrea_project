@@ -1,211 +1,212 @@
- <h1 align="center"> Northwest Real Estate Agency </h1>
+# Northwest Real Estate Agency
 
 ![Getting Started](/images/img_readme.jpg)
 
-# Sejam bem-vindos ao meu projeto de portfólio de negócio da empresa fictícia Northwest Real Estate Agency.
-###### [Visualizar projeto](https://ricardoffdev-nrea-project-dashboard-muvf30.streamlit.app/)
+# Welcome to my portfolio project for the fictional company Northwest Real Estate Agency.
+###### [View Project](https://ricardoffdev-nrea-project-dashboard-muvf30.streamlit.app/)
 
-## 1. O Problema do Negócio
+## 1. Business Problem
 
-Neste projeto de negócio irei analisar um banco de dados real. Este banco de dados público, foi  disponibilizado pelo website de competições de Data Science, o Kaggle.
-A empresa Northwest Real Estate Agency tem como objetivo realizar a compra e, a venda de imóveis na cidade de Seattle. Para isso a empresa necessita de uma análise precisa de todas as informações e assim poder obter o lucro desejado na compra/venda de imóveis.
+In this business project, I will analyze a real estate database. This public database was provided by the Kaggle data science competition website.
+Northwest Real Estate Agency aims to buy and sell properties in the city of Seattle. To achieve the desired profit in property transactions, the company requires accurate analysis of all relevant information.
 
-## 1.1 Contexto de negócio
+## 1.1 Business Context
 
-Nesse banco de dados iremos encontrar 21.613 entradas que datam de 02/05/2014 até 27/05/2015. Todas as entradas são de imóveis únicos da cidade de Seattle, situada na costa do pacífico nos EUA.
+This database contains 21,613 entries from May 2, 2014, to May 27, 2015. All entries represent unique properties in Seattle, located on the Pacific coast of the USA.
 
-## 1.2 Questões do time de negócios
+## 1.2 Business Questions
 
-#### -> Estimar quais são as melhores opções de compra e em qual valor?
+- Estimate the best purchasing options and their respective values.
+- After acquiring a property, determine the profit margin for the sale.
 
-#### -> Após adquirido o imóvel, qual é a margem de lucro que será inserida para a venda?
+## 2. Pre-planning
 
-## 2. Planejamento prévio
+## 2.1 Tools, IDEs, and Libraries
 
-## 2.1 Ferramentas, IDE's e Bibliotecas
+- Python 3.10
+- Visual Studio Code
+- Jupyter Notebook
+- PyCharm Community Ed.
+- Libraries: Seaborn, Plotly, Plotly Express, Pandas, Numpy, Folium, Geopandas, Streamlit-Folium, and Streamlit
+- Final deployment: Streamlit Web Apps
 
-* Python 3.10
-* Visual Studio Code
-* Jupyter Notebook
-* PyCharm Community Ed.
-* Bibliotecas: Seaborn, Plotly, Plotly Express, Pandas, Numpy, Folium, Geopandas, Streamlit-Folium e Streamlit
-* Deploy final Streamlit Web Apps
+## 2.2 Final Product
+
+A web page with the following information:
+- Solve the six main insights.
+- Provide purchasing suggestions for properties.
+- Suggest selling prices for acquired properties.
+
+## 3.0 Business Study
+
+The Seattle Real Estate Market is highly competitive according to sources from [Redfin](https://www.redfin.com/city/16163/WA/Seattle/housing-market), houses in Seattle receive an average of two offers for sale every 14 days. In the Seattle real estate market, the average monthly transaction value is $843,000. This value has been growing at an average rate of 7.3% per year. The average sale price per square foot in Seattle is $555, based on data from the past year.
+
+## 4.0 Data
+
+The data used in this project was obtained from a publicly available dataset provided by [Kaggle](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction).
+
+### 4.1 Source Attributes
+
+The following are the attributes included in the dataset:
+
+| Column        | Description                                                       |
+|:--------------|-------------------------------------------------------------------|
+| id            | Unique identifier for each property                                |
+| date          | Sale date                                                          |
+| price         | Sale price                                                         |
+| bedrooms      | Number of bedrooms                                                 |
+| bathrooms     | Number of bathrooms                                                |
+| sqft_living   | Square footage of the living area                                  |
+| sqft_lot      | Square footage of the lot                                          |
+| floors        | Number of floors                                                   |
+| waterfront    | Indicator of whether the property has a waterfront view            |
+| view          | Property view measured on an index                                 |
+| condition     | Property condition measured on an index                            |
+| grade         | Grade given to the property based on the King County grading system|
+| sqft_above    | Square footage above the basement                                   |
+| sqft_basement | Square footage of the basement                                      |
+| yr_built      | Year of construction                                               |
+| yr_renovated  | Year of the last renovation                                        |
+| zipcode       | Postal code                                                        |
+| lat           | Latitude                                                           |
+| long          | Longitude                                                          |
+| sqft_living15 | Square footage of the living area for the fifteen closest neighbors|
+| sqft_lot15    | Square footage of the lot for the fifteen closest neighbors        |
 
 
-## 2.2 Produto final
-
-Página Web com as seguintes informações:
-* Solucionar os seis principais insights.
-* Realizar as sugestões de compra dos imóveis.
-* Sugerir o valor de venda para os imóveis adquiridos.
+## 4.2 Source Attribute Details
 
 
-## 3. Estudo do negócio
+* waterfront: 0 = no, 1 = yes
+* view: 0 = No view, 1 = Poor, 2 = Average, 3 = Good, 4 = Excellent
+* yr_renovated: year of renovation or '0' if never renovated
+* bathrooms: In the USA, full bathrooms must have four plumbing fixtures. A full bathroom contains at least one sink, one toilet, one shower, and one bathtub. A bathroom appearing as 0.5 represents a bathroom with a toilet and a sink, while a 0.75 bathroom is one that contains a sink, a toilet, and a shower or bathtub.
+* condition: 
+   - 1 = Worn-out. Repairs and revisions needed on painted surfaces, coverings, plumbing, heating, and numerous functional deficiencies.
+   - 2 = Very worn-out. Requires significant repairs.
+   - 3 = Average. Some evidence of deferred maintenance and normal obsolescence with age, as some minor repairs are needed along with some touch-ups.
+   - 4 = Good. No obvious maintenance required, but also not everything is new.
+   - 5 = Very good. All items well maintained, many of which have been renovated and repaired as they showed signs of wear, increasing the lifespan and reducing the effective age with little deterioration or obvious obsolescence, with a high degree of utility.
+* grade: (1-3): Below minimum building standards.
+   - 4: Generally older, lower-quality construction.
+   - 5: Low-cost construction and labor. Small and simple design.
+   - 6: Lowest grade currently meeting building code. Low-quality materials and simple architectural design.
+   - 7: Has an average level of construction and design.
+   - 8: Slightly above average in construction and design. Usually better materials in both exterior and interior finishing work.
+   - 9: Better architectural design with extra design and quality on both the interior and exterior.
+   - 10: Homes of this quality have generally high-end features. Finishing work is better and more quality design is seen in floor plans. Usually larger in size.
+   - 11: Custom design and higher-quality finishings with added amenities of solid woods, bathrooms, and more luxurious options.
+   - 12: Custom design and excellent builders. All materials are of the highest quality, and all conveniences are present.
+   - 13: Generally designed and built to custom specifications. Mansion-level. Extensive high-quality cabinetry, wood finishes, marble, entryway forms, etc.
 
-O mercado de imóveis de Seattle é muito competitivo. As casas em Seattle recebem, na média, duas ofertas de venda a cada 14 dias.  Em Seattle por mês são comercializados U$843.000,00 na média, só no mercado imobiliário. Esse valor cresce na média de 7,3% ao ano. O preço médio de venda do square foot em Seattle é de U$555,00, valores estes do último ano. [fonte](fonte: https://www.redfin.com/city/16163/WA/Seattle/housing-market)
+## 4.3 Created Attributes
 
+|     COLUMN      | DESCRIPTION                                                                  |
+|:---------------:|------------------------------------------------------------------------------|
+| date_str        | Sale date in Day/Month/Year format                                           |
+| year            | Year of property sale                                                        |
+| month           | Month of property sale                                                       |
+| seasons         | Season of the year when the property was sold                                |    
+| living_m2       | Size (in square meters) of the interior space (built area) of the properties |
+| lot_m2          | Size (in square meters) of the land where the property is located            |
+| above_m2        | Size (in square meters) of the interior space above ground level             |
+| age             | Age of the property. (Current Year - Year Built)                             |
+| renovated       | Yes if the property has been renovated, and No otherwise                     |
+| price_m2        | Price of the property per total area in square meters                        |
 
-## 4.0 Dados
+## 4.4 Details of Created Attributes
 
-##### Estes são dados públicos que foram coletados na página web do [Kaggle](https://www.kaggle.com/datasets/harlfoxem/housesalesprediction).
+Seasons (seasons):
 
-## 4.1 Atributos de origem
+Summer = June to August.
+Autumn = September to November.
+Winter = December to February.
+Spring = March to May.
 
+m2_living, m2_lot, and m2_above:
+Conversion from square feet (sqft) to square meters (m²).
 
-|     COLUNA    | DESCRIÇÃO                                                              |
-|:-------------:|------------------------------------------------------------------------|
-| id            | Identificador único de cada imóvel                                     |
-| date          | Data da venda                                                          |
-| price         | Preço que foi vendido                                                  |
-| bedrooms      | Quantidade de quartos                                                  |
-| bathrooms     | Quantidade de banheiros                                                |
-| sqft_living   | Área da sala de estar em metros quadrados                              |
-| sqft_lot      | Área do lote em metros quadrados                                       |
-| floors        | Quantidade de pisos/andares                                            |
-| waterfront    | Identificador que informa se o imóvel tem ou não vista para água       |
-| view          | Vista do imóvel medida em índice                                       |
-| condition     | Condição do imóvel medida em índice                                    |
-| grade         | Nota dada ao imóvel baseada no sistema de classificação de King County |
-| sqft_above    | Área além do porão medida em metros quadrados                          |
-| sqft_basement | Área do porão medida em metros quadrados                               |
-| yr_built      | Ano de construção                                                      |
-| yr_renovated  | Ano da última reforma feita                                            |
-| zipcode       | Código postal                                                          |
-| lat           | Latitude                                                               |
-| long          | Longitude                                                              |
-| sqft_living15 | Área da sala de estar para os quinze vizinhos mais próximos            |
-| sqft_lot15    | Área da sala de estar para os quinze vizinhos mais próximos            |
+price_m2 = price / (living_m2 + lot_m2 + above_m2)
+Analyzing the price of the property based on its built area.
 
-## 4.2 Detalhamento dos atributos de origem
+## 5. Assumptions
 
-* waterfront: 0 = não, 1 = sim
-* view: 0 = Sem vista, 1 = Razoável, 2 = Média, 3 = Boa, 4 = Excelente
-* yr_renovated: ano de reforma ou ‘0’ se nunca renovado.
-* bathrooms: Nos EUA existem banheiros completos que obrigatóriamente possuem quatro acessórios de encanamento. Um banheiro completo contém pelo menos um lavatório, um sanitário, um chuveiro e uma banheira. O banheiro que aparece com 0.5, representa um banheiro com sanitário e pia, já o banheiro 0.75 é um banheiro que contém um lavatório, um sanitário e um chuveiro ou banheira.
-* condition: 1 = Desgastado. Reparação e revisão necessária em superfícies pintadas, coberturas, canalizações, aquecimento e numerosas insuficiências funcionais. 
-* 2 = Bastante desgastado. É necessária muita reparação.
-* 3 = Média. Algumas provas de manutenção diferida e obsolescência normal com a idade, na medida em que algumas pequenas reparações são necessárias, juntamente com alguns retoques.
-* 4 = Bom. Não é necessária manutenção óbvia, mas também não é tudo novo.
-* 5= Muito Bom. Todos os artigos bem conservados, muitos dos quais foram renovados e reparados à medida que mostraram sinais de desgaste, aumentando a esperança de vida e diminuindo a idade efetiva com pouca deterioração ou obsolescência evidente com um elevado grau de utilidade.
-* grade: (1-3): abaixo dos padrões mínimos de construção.
-* 4: Geralmente mais antiga, construção de baixa qualidade.
-* 5: Baixos custos de construção e mão-de-obra. Projeto pequeno e simples.
-* 6: A avaliação mais baixa que cumpre atualmente o código de construção. Materiais de baixa qualidade e projeto arquitetônico simples.
-* 7: tem um nível médio de construção e concepção.
-* 8: Um pouco acima da média em construção e concepção. Normalmente melhores materiais tanto no trabalho de acabamento exterior como interior.
-* 9: Melhor design arquitetônico com design e qualidade extra no interior e exterior.
-* 10: Casas com esta qualidade têm geralmente características de alta qualidade. Os trabalhos de acabamento são melhores e mais qualidade de design é vista nas plantas dos pisos. Geralmente têm um tamanho maior.
-* 11: Desenho personalizado e trabalhos de acabamento de maior qualidade com comodidades acrescidas de madeiras maciças, instalações sanitárias e opções mais luxuosas.
-* 12: Desenho à medida e excelentes construtores. Todos os materiais são da mais alta qualidade e todas as conveniências estão presentes.
-* 13: Geralmente concebidos e construídos à medida. Nível de mansão. Grande quantidade de trabalho de armário da mais alta qualidade, acabamentos em madeira, mármore, formas de entrada, etc.
+Missing Data: None of the dataset attributes have missing data.
 
-## 4.3 Atributos criados
+Duplicate Properties: There are 177 properties that are duplicated in the dataset, meaning they were sold more than once in different periods throughout the data collection period.
 
-|     COLUNA      | DESCRIÇÃO                                                              |
-|:---------------:|------------------------------------------------------------------------|
-| date_str        | Data de venda no formato Dia/Mês/Ano                                   |
-| year            | Ano da venda do imóvel                                                 |
-| month           | Mês da venda do imóvel                                                 |
-| seasons         | Estação do ano que imóvel foi vendido                                  |    
-| living_m2       | Tamanho (m²) do espaço interior (área construída) dos imóveis          |
-| lot_m2          | Tamanho (m²) do terreno onde o imóvel está situado                     |
-| above_m2        | Tamanho (m²) do espaço interior que se encontra acima do nível do solo |
-| age             | Idade do imóvel. (Ano atual - Ano Construção)                          |
-| renovated       | Sim se o imóvel foi reformado, e Não caso contrário                                                       |
-| price_m2        | Preço do imóvel pela área total em m²                                  |
+Outlier Value for Number of Bedrooms: There is a single property with 33 bedrooms, but upon cross-referencing data, such as the total land size of this property, it was determined that this data is inaccurate. Additionally, other properties with similar price range, internal size, number of bathrooms, and floors were analyzed, and the average number of bedrooms in those properties was 2.98.
 
-## 4.4 Detalhamento atributos criados
+Properties with Zero Bedrooms or Zero Bathrooms: There are 16 properties with zero bedrooms or zero bathrooms in the database. It is assumed that these properties are correct and will not be excluded since they may not be intended for residential use.
 
-Estações do ano (seasons):
+## 6. Top Six Insights
 
-Verão (summer) = de junho a agosto.
-Outono (autumn) = de setembro a novembro.
-Inverno (winter) = de dezembro a fevereiro.
-Primavera (spring) = de março a maio.
-
-m2_living, m2_lot e m2_above:
-Conversão de unidade de pé quadrado (sqft) para metro quadrado (m²).
-
-price_m2 = price / living_m2 + lot_m2 + above_m2
-Analisar o preço do imóvel pela sua área construída.
-
-## 5. Premissas
-
-Dados Faltantes: nenhum dos atributos do dataset possui dados faltantes
-
-Imóveis Duplicados: existem 177 imóveis que estão duplicados no dataset, ou seja, significa que foram vendidos mais de uma vez em períodos distintos ao longo do tempo que abrange a coleta de dados dos imóveis. 
-
-Valor ‘outlier’ para número de quartos: há um único imóvel que possui 33 quartos, porém ao se realizar um cruzamento de dados, como por exemplo o tamanho total do terreno deste imóvel, foi possível afirmar que este dado é inverídico. Além disso, analisou-se outros imóveis com faixa de preço, faixa de tamanho interno do imóvel, quantidade de banheiros e andares semelhante a esse imóvel e a quantidade média de quartos nos imóveis analisados foi de 2,98.
-
-Imóveis com zero quartos ou zero banheiros: existem 16 imóveis com zero quartos ou zero banheiros na base de dados, assumiremos que estão corretos e não serão excluídos. Dado que estes imóveis podem não ser direcionados para uso residencial, de moradia.
-
-## 6. Seis Principais Insights
-
-#### H1: Imóveis com nível de condição maior ou igual a 3 são 20% mais caras, na média.
-X Falsa:
-Os imóveis da categoria 3, 4 e 5 custam 153.22% a mais na média geral
+#### H1: Properties with a condition level greater than or equal to 3 are 20% more expensive on average.
+   - False:
+   Properties in categories 3, 4, and 5 cost, on average, 153.22% more.
 
 ![H1](./images/H1.png)
 
-#### H2: Imóveis com até 50 anos que foram reformados são 20% mais caros do que os não reformados, na média?
-X Falsa:
-Considerando o preço médio, ao invés de 20% mais caros, os imóveis com até 50 de idade reformados são 69.33% mais caros.
+#### H2: Properties up to 50 years old that have been renovated are 20% more expensive on average compared to non-renovated properties.
+   - False:
+   Considering the average price, instead of being 20% more expensive, renovated properties up to 50 years old are 69.33% more expensive.
 
 ![H2](./images/H2.png)
 
-#### H3: Imóveis que possuem vista para água, são 30% mais caros, na média.
-X Falsa:
-Considerando o preço médio, ao invés de 30%, os imóveis com vista para a água custam 212.63% a mais na média
+#### H3: Properties with a waterfront view are 30% more expensive on average.
+   - False:
+   Considering the average price, instead of being 30% more expensive, properties with a waterfront view cost 212.63% more on average.
 
 ![H3](./images/H3.png)
 
-#### H4: Imóveis com data de construção menor que 1955, são 50% mais baratos, na média.
-X Falsa:
-Considerando o preço médio, imóveis com data de construção menor que 1955, possuem preços 1,09% mais baratos.
+#### H4: Properties with a construction date before 1955 are 50% cheaper on average.
+   - False:
+   Considering the average price, properties with a construction date before 1955 are only 1.09% cheaper.
 
 ![H4](./images/H4.png)
 
-#### H5: Os imóveis das últimas décadas são mais valiosos?
-✔️ Verdadeira:
-A avaliação dos imóveis construídos nas últimas três décadas encontra-se em média cerca de 19% acima da avaliação dos imóveis
-construídos entre 1900 e 1959, enquanto que há um crescimento médio de 4,7% por década entre as décadas de 1940 e 1990.
+#### H5: Are properties from the last few decades more valuable?
+   - True:
+   The evaluation of properties built in the last three decades is, on average, about 19% higher than the evaluation of properties built between 1900 and 1959, with an average growth of 4.7% per decade between the 1940s and 1990s.
 
-![H2](./images/H5.png)
+![H5](./images/H5.png)
 
-#### H6: O valor mediano do imóveis variam 20% de acordo com a estação do ano?
-X Falsa:
-Considerando a maior variação no preço mediano, o maio percentual de aumento encontrado foi do inverno para a primavera, onde a mediana foi 8.13% maior.
+#### H6: Does the median value of properties vary by 20% according to the season?
+   - False:
+   Considering the largest variation in the median price, the highest percentage increase was found from winter to spring, where the median price was 8.13% higher.
 
 ![H6](./images/H6.png)
 
-## 7. Questões de Negócio
+## 7. Business Questions
 
-As questões de negócio foram solucionadas com embasamento analítico e, também, com a análise exploratória dos dados (EDA).
+The business questions have been addressed through analytical reasoning and exploratory data analysis (EDA).
 
-Quais são os imóveis que a Northwest Real Estate Agency deveria comprar e por qual preço ?
+Which properties should the Northwest Real Estate Agency buy and at what price?
 
-Os imóveis foram agrupados por região ( zipcode ) e dentro de cada região, encontrei a mediana dos preços por área construída.
-Irei sugerir a compra dos imóveis que possuem preço abaixo da mediana da região, estejam em boas condições de conservação maior ou igual a 3, que tenham um ou mais banheiros e quartos e, também, devem ter uma grade de classificação maior ou igual a 7.
+The properties have been grouped by region (zipcode), and within each region, the median prices per built area have been determined. I will suggest purchasing properties that have prices below the region's median, are in good condition (condition >= 3), have one or more bathrooms and bedrooms, and have a grading of 7 or higher.
 
-Todos os imóveis que estão dentro destes filtros de compra serão separados em uma lista.
-Dentro desta lista separei os dois imóveis prioritários para aquisição, já que os mesmos possuem 'Vista para a Água'.
+All properties that meet these purchase filters will be compiled into a list. Within this list, I have identified the top two priority properties for acquisition, as they have 'Water View'.
 
-Uma vez que o imóvel foi comprado, por qual preço vendê-los e qual é a melhor época para concretizar a venda?
+Once a property has been purchased, at what price should it be sold, and when is the best time to sell?
 
-Agruparei os imóveis por região ( zipcode ) e por estação do ano. Dentro de cada região e estação, irei calcular a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados. Assim poderemos ter uma clara noção do preço de venda e também do lucro resultado. 
+I will group the properties by region (zipcode) and by season of the year. Within each region and season, I will calculate the price median. Then, I will calculate the percentage of profit based on the purchased properties. This will provide a clear understanding of the selling price and the resulting profit.
 
-## 8.0 Conclusão
+Please note that the translations have been provided in Markdown format for easy formatting and readability. You can copy and paste the translated text as needed.
 
-Os objetivos almejados inicialmente foram cumpridos no que tange a lista de recomendações de imóveis para compra, bem como, a projeção do valor de venda destes imóveis. Além disso, foi possível responder os 6 principais insights à partir da análise exploratória do banco de dados. Por fim, tudo isso foi colocado em uma aplicação na nuvem, o que facilita o acesso a todos os resultados obtidos.
+## 8.0 Conclusion
 
-Sobre os resultados obtidos, pode-se perceber uma forte influência do atributo 'área construída' em relação ao valor do imóvel. Dessa forma, buscou-se retirar seu impacto ao comparar este atributo com os demais atributos, assim evitamos um enviesamento desta análise.
+The initial objectives have been achieved regarding the list of recommended properties for purchase and the projection of their selling prices. Additionally, the analysis of the dataset allowed us to answer the 6 key insights. Lastly, all the results have been presented in a cloud-based application, which facilitates access to the obtained outcomes.
 
-Aferimos então que o presente projeto se torna mais um exemplo da importância do uso de dados para auxiliar os times de negócio nas suas tomadas de decisões dentro da empresa. Também podemos apontar que, além das ferramentas usuais de tecnologia e estatística, o conhecimento vindo das mais diversas áreas pode impactar na qualidade da análise dos dados.
+Regarding the results, it is evident that the "built area" attribute strongly influences the property value. Therefore, efforts were made to minimize its impact when comparing it with other attributes, thus avoiding bias in the analysis.
 
-Além disso, a geração de insights pode nos trazer novas perguntas ou até mesmo, novas análises. Fortalecendo a união dos times de negócios e de dados.
+This project serves as another example of the importance of using data to assist business teams in decision-making processes within the company. Furthermore, it highlights that, in addition to the usual technological and statistical tools, knowledge from various fields can impact the quality of data analysis.
 
-## 9.0 Próximos Passos
+Additionally, generating insights can lead to new questions or further analyses, strengthening the collaboration between business and data teams.
 
-Usar algoritmos de Machine Learning para recomendar o preço estimado de compra e de venda. Usar clusterização para poder realizar análises de comparação dos imóveis.
+## 9.0 Next Steps
 
-Outro passo importante é o compartilhamento. Todos os Insights gerados devem ser compartilhados com os outros times da empresa. Dessa maneira, a empresa como um todo irá almejar e alcançar novos horizontes. Toda nova idéia que gere discussões e contradições nos projetos, serão sempre muito bem-vindas. Afinal quanto mais compartilhado for o conhecimento, melhores serão os resultados alcançados.
+1. Utilize Machine Learning algorithms to estimate the purchase and selling prices.
+2. Employ clustering techniques to conduct comparative analyses of properties.
+   
+Another important step is sharing. All generated insights should be shared with other teams within the company. This way, the company as a whole can strive for and achieve new horizons. Any new idea that sparks discussions and contradictions in projects is always welcome. After all, the more knowledge is shared, the better the results achieved.
+
