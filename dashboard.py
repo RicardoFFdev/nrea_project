@@ -81,7 +81,7 @@ def buy_recomm(data, geofile):
         buy_list_prior = buy_list.loc[buy_list['waterfront'] == 'yes']
         df2 = buy_list
         df3 = df2.copy()
-        df3['date'] = pd.to_datetime(df3['date'], format=('%Y-%m-%d'))
+        df3['date'] = pd.to_datetime(df3['date'], format=('%Y/%m/%d'))
         df3.loc[df3['bedrooms'] == 33, 'bedrooms'] = 3
 
         # Barra lateral de seleção e filtros
@@ -187,7 +187,7 @@ def sell_recomm(data):
                     a mediana do preço. Em seguida calcularemos o percentual de lucro base sobre os imóveis comprados que será de 5 a \
                     15% do valor pago. Assim poderemos ter uma clara noção do preço de venda e também do lucro obtido.')
 
-        data['date'] = pd.to_datetime(data['date'], format=('%Y-%m-%d'))
+        data['date'] = pd.to_datetime(data['date'], format=('%Y/%m/%d'))
         data.loc[data['bedrooms'] == 33, 'bedrooms'] = 3
         data['month'] = data['date'].dt.month
         data['year'] = data['date'].dt.year
