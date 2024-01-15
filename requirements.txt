@@ -1,7 +1,7 @@
-folium==0.13.0
-geopandas==0.12.1
+folium==0.15.1
+geopandas==0.14.2
 numpy==1.21.5
 pandas==1.4.4
 plotly_express==0.4.1
-streamlit==1.15.2
-streamlit_folium==0.7.0
+streamlit==1.30.0
+streamlit_folium==0.18.0
